@@ -7,8 +7,13 @@ export default function MenuBar() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <Navbar variant="dark" bg='dark'>
-          <h3 style = {{color:'white'}}>Central Planning <IconContext.Provider value = {{color:'red'}}><BsStarFill></BsStarFill></IconContext.Provider></h3>
+        <Navbar variant="dark" bg="dark">
+          <h3 style={{ color: "white"}}>
+            Central Planning {" "}
+            <IconContext.Provider value={{ color: "red" }}>
+              <BsStarFill></BsStarFill>
+            </IconContext.Provider>
+          </h3>
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
           </Nav>
