@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect } from "react";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import { BsStarFill } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
@@ -8,8 +8,8 @@ export default function MenuBar() {
     <div className="container-fluid">
       <div className="row">
         <Navbar variant="dark" bg="dark">
-          <h4 style={{ color: "white"}}>
-            Central Planning {" "}
+          <h4 style={{ color: "white" }}>
+            Central Planning{" "}
             <IconContext.Provider value={{ color: "red" }}>
               <BsStarFill></BsStarFill>
             </IconContext.Provider>
