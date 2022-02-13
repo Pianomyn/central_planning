@@ -25,12 +25,12 @@ export default function MenuBar({ menuBarActive }: MenuBarProps) {
       <div id="menu-bar">
         <div className="d-flex flex-column">
           <div className="d-flex justify-content-center logo">
-            <IconContext.Provider value={{ color: "#DC3545", size: "28px"}}>
+            <IconContext.Provider value={{ color: "#DC3545", size: "28px" }}>
               <BsStarFill></BsStarFill>
             </IconContext.Provider>
           </div>
           <div className="d-flex justify-content-center">
-            <Button id="menu-status-button" variant="danger">
+            <Button variant="dark">
               <AiOutlineMenu />
             </Button>
           </div>
