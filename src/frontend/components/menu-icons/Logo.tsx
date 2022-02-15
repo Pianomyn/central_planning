@@ -7,7 +7,7 @@ type LogoProps = {
 export default function Logo({ menuBarActive }: LogoProps) {
   const logo = menuBarActive ? (
     <div className="d-flex justify-content-center menu-bar-spacing">
-      <h4 className="logo-open">Central Planning </h4>
+      <h4 className="logo-open">Central Planning&nbsp;</h4> 
       <BsStarFill color="#DC3545" />
     </div>
   ) : (
