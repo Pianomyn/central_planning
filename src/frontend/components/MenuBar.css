@@ -11,6 +11,12 @@
   width: 100%;
 }
 
-.logo{
-    margin-bottom:9%;
+.menu-bar-spacing {
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.logo-open {
+  color: white;
+  align-self: center;
 }

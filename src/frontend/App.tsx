@@ -6,10 +6,10 @@ import MenuBar from "./components/MenuBar";
 import "./App.css";
 
 function App() {
-  const [menuBarActive, setMenuBarStatus] = useState<boolean>(false);
+  const [menuBarActive, setMenuBarStatus] = useState(false);
   var menuBarClass = menuBarActive ? "menu-bar-open" : "menu-bar-closed";
-  var menuColumns = menuBarActive ? "col-3 p-0" : "col-1 p-0";
-  var appColumns = menuBarActive ? "col-9 p-0" : "col-11 p-0";
+  var menuColumns = menuBarActive ? "col-2 p-0" : "col-1 p-0";
+  var appColumns = menuBarActive ? "col-10 p-0" : "col-11 p-0";
 
   return (
     <Router>
@@ -17,7 +17,7 @@ function App() {
         <div className="row">
           <div className={menuColumns}>
             <div id="menu-bar" className={menuBarClass}>
-              <MenuBar menuBarActive={menuBarActive} />
+              <MenuBar menuBarActive={menuBarActive} handleMenuBarClick={handleMenuBarClick}/>
             </div>
           </div>
           <div className={appColumns}>
@@ -27,6 +27,10 @@ function App() {
       </div>
     </Router>
   );
+  
+  function handleMenuBarClick(){
+    setMenuBarStatus(!menuBarActive)
+  }
 }
 
 export default App;
