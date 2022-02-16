@@ -7,7 +7,6 @@ import "./App.css";
 
 function App() {
   const [menuBarActive, setMenuBarStatus] = useState(false);
-  var menuBarClass = menuBarActive ? "menu-bar-open" : "menu-bar-closed";
   var menuColumns = menuBarActive ? "col-2 p-0" : "col-1 p-0";
   var appColumns = menuBarActive ? "col-10 p-0" : "col-11 p-0";
 
@@ -16,20 +15,24 @@ function App() {
       <div className="container-fluid">
         <div className="row">
           <div className={menuColumns}>
-            <div id="menu-bar" className={menuBarClass}>
-              <MenuBar menuBarActive={menuBarActive} handleMenuBarClick={handleMenuBarClick}/>
+            <div id="menu-bar">
+              <MenuBar
+                menuBarActive={menuBarActive}
+                handleMenuBarClick={handleMenuBarClick}
+              />
             </div>
           </div>
           <div className={appColumns}>
             <Routes></Routes>
+            <h1 className="text-3xl font-bold underline">Hello world!</h1>
           </div>
         </div>
       </div>
     </Router>
   );
-  
-  function handleMenuBarClick(){
-    setMenuBarStatus(!menuBarActive)
+
+  function handleMenuBarClick() {
+    setMenuBarStatus(!menuBarActive);
   }
 }
 

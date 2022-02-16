@@ -23,9 +23,6 @@ export default function MenuBar({
   menuBarActive,
   handleMenuBarClick,
 }: MenuBarProps) {
-  // Assume the following 2 arrays are of the same size
-  const menuButtons: Array<any> = menuBarActive ? ["Home"] : ["H"];
-  const links: Array<string> = ["/"];
 
   return (
     <Navbar variant="dark" bg="dark">
